@@ -1,14 +1,13 @@
 import Slots from './Slots';
+import { Clicker } from './Clicker';
 import './App.css'
 
 function App() {
   return (
     <div>
-    <h1>Welcome to the Slot Machine!</h1>
-      <Slots val1="🍒" val2="🍒" val3="🍒" />
-      <Slots val1="🍌" val2="🍌" val3="🍌" />
-      <Slots val1="🍒" val2="🍌" val3="🍒" />
-  </div>
+      <Clicker message="HI!!!!" buttonText="Please Click Me" />
+      <Clicker message="Please Stop Clicking Me!" buttonText="do not click" />
+    </div>
   );
 }
 

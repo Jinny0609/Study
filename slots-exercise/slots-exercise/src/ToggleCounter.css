@@ -1,0 +1,7 @@
+/* ToggleCounter.css */
+.ToggleCounter {
+    cursor: pointer;
+    font-size: 2rem;
+    display: inline-block;
+    margin: 10px;
+  }

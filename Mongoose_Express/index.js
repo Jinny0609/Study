@@ -25,6 +25,31 @@ app.get('/products', async (req, res) => {
     res.render('products/index', { products });
 });
 
+app.get('/products/:id', async (req, res) => {
+  const { id } = req.params;
+  const product = await Product.findById(id)
+  // console.log(product);
+  res.render('products/show', { product })
+})
+
+// 오류 처리 까지 한거
+// app.get('/products/:id', async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const product = await Product.findById(id);
+//     console.log(product); // 터미널에서 확인용
+
+//     if (!product) {
+//       return res.status(404).send('Product not found');
+//     }
+
+//     res.render('products/show', { product });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send('Internal Server Error');
+//   }
+// });
+
 app.listen(3000, () => {
     console.log("APP IS LISTENING ON PORT 3000!");
 });
